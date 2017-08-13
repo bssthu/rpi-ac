@@ -25,6 +25,7 @@ if __name__ == '__main__':
         try:
             state = urlopen(config['server_url']).read()
             if state != last_state:
+                last_state = state
                 print('new state: %s' % str(state))
                 cmd = config['command_dict'].get(state, None)
                 if cmd is not None:
