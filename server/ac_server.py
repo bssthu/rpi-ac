@@ -10,7 +10,7 @@ import flask
 app = flask.Flask(__name__)
 
 
-state = 1
+state = 'on'
 
 
 @app.route('/ac', methods=['GET'])
@@ -25,7 +25,8 @@ def on_set_ac_state():
     """设置空调状态"""
     global state
     state = flask.request.form['ac_state']
+    return state
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
