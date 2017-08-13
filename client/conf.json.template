@@ -1,0 +1,8 @@
+{
+    "server_url": "http://localhost:5000/ac",
+    "interval": 30,
+    "command_dict": {
+        "on": "irsend SEND_ONCE /home/pi/lircd.conf KEY_OPEN",
+        "off": "irsend SEND_ONCE /home/pi/lircd.conf KEY_CLOSE"
+    }
+}
