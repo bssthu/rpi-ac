@@ -1,0 +1,22 @@
+// change the name of this file to 'config.js'
+module.exports = {
+  'httpPort': 80,
+  'token': 'mytoken',           // 公众号的令牌
+  'encodingAesKey': 'mykey',    // 公众号的消息加解密密钥
+  'trustedOpenIds': {           // 用户的openid
+    'openid': true,
+  },
+
+  'acPort': 8000,
+  'acPath': '/ac',
+  'acCmd': {          // 支持的空调指令
+    'on': {           // 指令名
+      'ac_on': true,  // 用户发这条消息，就代表该指令
+    },
+    'off': {
+      'ac_off': true,
+    },
+  },
+
+  'logName': 'log',
+}

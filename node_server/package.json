@@ -1,0 +1,27 @@
+{
+  "name": "node_server",
+  "description": "接收发送到微信公众平台的消息，用于控制空调。",
+  "keywords": [
+    "wechat"
+  ],
+  "homepage": "https://github.com/bssthu/rpi-ac",
+  "version": "0.1.0",
+  "author": {
+    "name": "bssthu"
+  },
+  "main": "./server",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bssthu/rpi-ac.git"
+  },
+  "dependencies": {
+    "xml2js": ">=0.2.3"
+  },
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bssthu/rpi-ac/issues"
+  }
+}
