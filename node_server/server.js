@@ -79,7 +79,7 @@ function wechatReceiver(request, response) {
 function handleXmlMessage(xmlMessage) {
   xml2js.parseString(xmlMessage, function (err, result) {
     if (!err) {
-      if (result.hasOwnProperty('xml')) {
+      if (result !== null && result.hasOwnProperty('xml')) {
         xmlResult = result.xml;
         if (xmlResult.hasOwnProperty('MsgType') &&
             xmlResult.hasOwnProperty('FromUserName') &&
