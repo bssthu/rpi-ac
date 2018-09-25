@@ -70,7 +70,10 @@ function wechatReceiver(request, response) {
     request.addListener('end', function () {
       // 接收普通消息
       // http://mp.weixin.qq.com/wiki/10/79502792eef98d6e0c6e1739da387346.html
-      handleXmlMessage(postData);
+      try {
+        handleXmlMessage(postData);
+      } catch (err) {
+      }
     });
   }
 }
