@@ -53,7 +53,7 @@ function wechatReceiver(request, response) {
   // 身份验证，见“接入指南”
   // http://mp.weixin.qq.com/wiki/17/2d4265491f12608cd170a95559800f2d.html
   if (query.signature === signature) {
-    if (query.hasOwnProperty('echostr')) {
+    if (Object.prototype.hasOwnProperty.call(query, 'echostr')) {
       response.write(query.echostr);
     }
   }
